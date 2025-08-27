@@ -1,5 +1,9 @@
 <main>
 
+   <aside class="left">
+    <h1>oi</h1>
+  </aside>
+
   <div class="display">
     @for(k of messages; track k.content){
       <li [class]="k?.sender === 'User' ? 'user' : 'assistant'">
@@ -9,7 +13,12 @@
     <hr #hr>
   </div>
 
+  <aside class="right">
+    <h1>tchau</h1>
+  </aside>
+
   <form [formGroup]="form" (ngSubmit)="onSubmit()">
-    <input type="text" required formControlName="content">
+    <textarea required formControlName="content" (input)="onInput($event)" ></textarea>
+    <button> <i class='bx bx-chevrons-right'></i> </button>
   </form>
 </main>

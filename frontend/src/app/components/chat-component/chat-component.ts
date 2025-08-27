@@ -45,6 +45,8 @@ export class ChatComponent {
   }
 
   onSubmit(){
+    if(this.form.value.content.length===0) return;
+
     this.form.disable()
     // this.websocket.sendMessage(this.form.value.content);
     this.messages.push({
@@ -55,5 +57,11 @@ export class ChatComponent {
     if (this.hr && this.hr.nativeElement) {
       this.hr.nativeElement.scrollIntoView({ behavior: 'smooth', block: 'end' });
     }
+  }
+
+  onInput(event: Event): void{
+    const textarea = event.target as HTMLTextAreaElement;
+    textarea.style.height = '100px'; // altura mínima
+    textarea.style.height = Math.min(textarea.scrollHeight, 300) + 'px';
   }
 }
