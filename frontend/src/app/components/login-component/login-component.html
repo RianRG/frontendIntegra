@@ -1,0 +1,57 @@
+<div class="home-container">
+  <header class="header">
+    <div class="logo"> <img src="assets/logo.png" alt=""></div>
+    <nav class="nav">
+      <a href="#">Inicio</a>
+      <a href="#">FAQ IA</a>
+      <a href="#">Dashboard</a>
+      <a href="#">Configurações</a>
+    </nav>
+    <nav class="nav-mobile">
+      <button class="menu" [class.active]="isActive" (click)="toggleMenu()"></button>
+      <div class="sidebar nav-dropdown" [class.active]="isActive">
+         <div class="sidebar-title">Técnico em Informática</div>
+        <ul>
+        <li><a href="#"> <i class='bx bxs-home'></i> Início</a></li>
+        <li><a href="#"> <i class='bx bx-stats' ></i> Faq IA</a></li>
+        <li><a href="#"> <i class='bx bxs-chat' ></i> Dashboard</a></li>
+        <li><a href="#"> <i class='bx bxs-cog' ></i> Configurações</a></li>
+      </ul>
+      </div>
+
+    </nav>
+  </header>
+
+  <main class="main-container">
+    <!-- Sidebar opcional -->
+
+    <!-- Conteúdo principal -->
+    <main class="main-content">
+      <div class="section-title">Como você deseja navegar?</div>
+      <div class="content-grid">
+        <div class="content-card">
+          <div>
+            <div class="card-title">Perfil de estudante</div>
+            <div class="card-desc">Apenas para estudantes, aqui você poderá ver videoaulas explicativas, pdfs e muito mais recursos para o seu melhor desempenho.</div>
+          </div>
+          <div class="card-actions">
+            <button class="btn">Estudar</button>
+          </div>
+        </div>
+        <div class="content-card">
+          <div>
+            <div class="card-title">Modo visitante</div>
+            <div class="card-desc">Quer dar uma espiadinha no nosso sistema? Já aviso que não pode fazer bagunça (alguns recursos do chat de IA ficam desabilitados para visitantes).</div>
+          </div>
+          <div class="card-actions">
+            <button class="btn">Acessar</button>
+          </div>
+        </div>
+      </div>
+      <p class="bottomParagraph">
+        Esse é o sistema "Integra Info Técnico", uma plataforma feita para você estudante! Aqui reunimos todos os materiais que você precisa para uma aprovação tranquila e descontraída, contamos com inteligências artificiais treinadas da melhor maneira 
+        para o seu melhor entendimento e proveito.
+      </p>
+    </main>
+  </main>
+</div>
